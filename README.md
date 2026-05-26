@@ -1,0 +1,244 @@
+# 🛒 Customer Purchasing Behavior Analysis
+
+## 📌 Project Overview
+
+This project focuses on **analyzing customer purchasing behavior** to uncover meaningful patterns in buying decisions, customer preferences, and revenue generation trends. The analysis was performed on a dataset containing **3,900 customer purchase records across multiple product categories**, with the objective of generating actionable business insights that support **marketing optimization, customer segmentation, profitability improvement, and strategic decision-making**.
+
+The project follows a complete **end-to-end analytics workflow**, beginning with **data cleaning and exploratory analysis using Python**, followed by **database-driven business analysis using PostgreSQL**, and concluding with **interactive dashboard creation in Power BI**, stakeholder reporting, and business recommendations.
+
+---
+
+## 🎯 Project Objectives
+
+The primary objective of this project was to identify **customer purchasing patterns** and answer critical business questions related to:
+
+- Customer spending behavior across demographics (age, gender)
+- Revenue contribution by customer segments
+- Impact of subscription status on customer spending
+- Product category performance and purchase trends
+- Customer buying frequency and repeat purchase behavior
+- Discount effectiveness and purchasing patterns
+- Shipping preferences and spending tendencies
+- Opportunities to optimize marketing strategy and profitability
+
+Ultimately, the goal was to convert raw transactional data into **business-driven insights** that can help organizations improve operational efficiency, customer retention, and profit margins.
+
+---
+
+## 🛠️ Tech Stack
+
+| Technology | Purpose |
+|------------|----------|
+| **Python (Pandas, NumPy, Matplotlib, Seaborn)** | Data Cleaning, Exploratory Data Analysis |
+| **PostgreSQL** | Business Querying & Data Analysis |
+| **Power BI** | Interactive Dashboarding & Visualization |
+| **SQL** | Business Intelligence Queries |
+| **Jupyter Notebook** | Analytical Workflow & Documentation |
+
+---
+
+## 📂 Dataset Information
+
+The dataset consists of **3,900 purchase transactions** and **18 customer-related attributes**, including:
+
+- Customer demographics (Age, Gender, Location)
+- Purchase details (Item Purchased, Category, Purchase Amount)
+- Customer behavior indicators (Subscription Status, Previous Purchases, Frequency of Purchases)
+- Marketing variables (Discount Applied, Promo Code Usage)
+- Logistics and experience data (Shipping Type, Review Rating)
+
+This diverse feature set enabled a **multi-dimensional customer behavior analysis**.
+
+---
+
+## 🧹 Data Cleaning & Preprocessing (Python)
+
+To ensure high-quality and analysis-ready data, extensive preprocessing was performed using **Python**.
+
+### Key Data Cleaning Steps:
+
+### 1. Data Exploration
+Performed initial inspection of the dataset using:
+
+- `df.info()` to understand data structure and datatypes
+- `df.describe()` for statistical summaries
+- Missing value detection and consistency checks
+
+### 2. Standardizing Column Names
+Column names were transformed into **snake_case format** by:
+- Converting text to lowercase
+- Replacing spaces with underscores
+
+This improved consistency and SQL compatibility.
+
+### 3. Missing Value Treatment
+A total of **37 missing values** were identified in the `review_rating` column.
+
+Instead of removing rows or applying a generic replacement strategy, missing ratings were imputed using the **median rating of their respective product category**, ensuring better contextual accuracy and minimizing analytical bias.
+
+### 4. Feature Engineering
+Additional business-focused features were created to improve segmentation and analytical depth:
+
+#### Age Group Categorization
+Customers were grouped into:
+
+- Young Adult
+- Adult
+- Middle Aged
+- Senior
+
+This enabled demographic-level purchasing analysis.
+
+#### Purchase Frequency Transformation
+The `frequency_of_purchases` column was standardized into interpretable time-based purchase intervals for customer behavior analysis.
+
+### 5. Redundant Feature Removal
+The `promo_code_used` column was removed due to overlapping information with `discount_applied`, reducing redundancy and improving model clarity.
+
+---
+
+## 🗄️ Database Integration Using PostgreSQL
+
+After cleaning and preprocessing, the refined dataset was integrated into a **PostgreSQL database** for structured business analysis.
+
+Python scripts were used to:
+
+- Establish database connectivity
+- Create relational tables
+- Import cleaned datasets into PostgreSQL
+- Execute SQL-based business intelligence queries
+
+This step simulated a real-world analytics workflow where cleaned operational data is transferred into databases for scalable querying and reporting.
+
+---
+
+## 📊 Business Analysis Using SQL
+
+A series of SQL queries were written to answer practical business questions and identify purchasing trends.
+
+### Key Business Questions Answered
+
+### Revenue Analysis
+- What is the total revenue generated by **male vs female customers**?
+- Which customer segment contributes the highest revenue?
+
+### Customer Spending Behavior
+- Which customers used discounts but still spent **above the average purchase amount**?
+- Does express shipping correlate with **higher spending patterns**?
+
+### Product Performance
+- Which products receive the **highest customer ratings**?
+- What are the **top three most purchased products within each category**?
+
+### Subscription Analysis
+- Do subscribers spend more than non-subscribers?
+- Are repeat buyers more likely to subscribe?
+
+### Customer Segmentation
+- Which age group contributes the **highest revenue share**?
+- How do purchasing habits differ across customer demographics?
+
+These business-focused SQL analyses transformed raw transactional data into actionable insights for decision-makers.
+
+---
+
+## 📈 Data Visualization (Power BI)
+
+The cleaned and analyzed data was imported into **Power BI** to create an interactive and stakeholder-friendly dashboard.
+
+### Dashboard Highlights
+
+- Customer count overview
+- Average purchase amount
+- Review rating analysis
+- Revenue by product category
+- Sales by category
+- Subscription segmentation
+- Revenue by age group
+- Sales performance across customer demographics
+
+The dashboard enables business users to quickly interpret customer trends and make informed decisions through interactive visual storytelling.
+
+---
+
+## 💡 Key Business Insights & Recommendations
+
+Based on the analysis, the following strategic recommendations were proposed:
+
+### 1. Target Younger Customer Segments
+Young adults demonstrated strong revenue contribution, indicating an opportunity for **age-specific marketing campaigns and personalized product positioning**.
+
+### 2. Improve Performance of Lower-Selling Categories
+Underperforming product categories such as outerwear can benefit from **targeted discount strategies and promotional bundling** to increase conversion rates.
+
+### 3. Enhance Subscription Value Proposition
+Subscription adoption remains comparatively low, suggesting the need for **exclusive membership benefits, loyalty rewards, or premium customer incentives**.
+
+### 4. Optimize Pricing Strategy
+High-demand products across categories may support **slight price optimization without significantly affecting purchase volume**, improving overall profit margins.
+
+### 5. Improve Delivery Experience
+Faster and more reliable shipping services can contribute to **improved customer satisfaction, retention, and repeat purchasing behavior**.
+
+---
+
+## 📌 Project Workflow
+
+```text
+Raw Dataset
+      ↓
+Data Cleaning & EDA (Python)
+      ↓
+Feature Engineering
+      ↓
+PostgreSQL Database Integration
+      ↓
+SQL Business Analysis
+      ↓
+Power BI Dashboard Creation
+      ↓
+Stakeholder Report & Business Recommendations
+```
+
+---
+
+## 🚀 Key Skills Demonstrated
+
+- Data Cleaning & Preprocessing
+- Exploratory Data Analysis (EDA)
+- SQL Query Writing
+- PostgreSQL Database Management
+- Business Intelligence & Reporting
+- Data Visualization (Power BI)
+- Stakeholder Communication
+- Business Recommendation Development
+- Customer Segmentation Analysis
+
+---
+
+## 📷 Dashboard Preview
+
+_Add screenshots of your Power BI dashboard here._
+
+---
+
+## 📁 Repository Structure
+
+```text
+Customer-Purchasing-Behavior-Analysis/
+│── data/
+│── notebooks/
+│── sql_queries/
+│── powerbi_dashboard/
+│── reports/
+│── presentation/
+│── README.md
+```
+
+---
+
+## 📬 Conclusion
+
+This project demonstrates a complete **business-oriented data analytics workflow**, combining **Python, SQL, PostgreSQL, and Power BI** to extract actionable insights from customer purchase data.
+
+Rather than focusing only on technical analysis, the project emphasizes **real-world business problem solving**, translating customer purchasing patterns into strategic recommendations that can improve **marketing efficiency, customer engagement, and profitability**.
