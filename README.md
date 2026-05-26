@@ -216,12 +216,6 @@ Stakeholder Report & Business Recommendations
 
 ---
 
-## 📷 Dashboard Preview
-
-_Add screenshots of your Power BI dashboard here._
-
----
-
 ## 📁 Repository Structure
 
 ```text
